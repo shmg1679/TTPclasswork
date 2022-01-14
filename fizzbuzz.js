@@ -6,7 +6,7 @@ function fizzbuzz(num){
         if(i%3===0){
             console.log("fizz")
             //if i mod 5 is equal to 0, print buzz as well right after
-            //unless i 
+            //unless I create a string to link it
             if(i%5===0){
                 console.log("buzz")
             }
