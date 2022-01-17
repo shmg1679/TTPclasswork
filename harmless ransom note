@@ -1,0 +1,26 @@
+// create two strings in randomsomNote and magazine
+let ransomNote="aabbcc", magazine="abc";
+//theres two way to go about this, one if whether or not you need the exact amount
+//of letters to construct it meaning you need exactly the same amount of a, b, c, etc
+// in magazine to make the random note or just having the letter in magazine is fine
+// if it is the former, then you can make a list and pop the letters from
+//both list if they're a match. if there is still remaining letters in random note
+//then its false otherwise, true
+//if its the latter, just run a for loop to check each character and
+// see if you can create create the ransom note using the magazine letters
+for(var i=0; i<ransomNote.length;i++){
+    for(var j=0; i<magazine.length;j++){
+        if(ransomNote[i]===magazine[j]){
+            ransomNote = ransomNote.slice(1);
+            magazine = magazine.slice(1);
+        }
+    }
+}
+
+//Note this doesn't really work at the moment, just a rough idea
+//if the ransom note is empty, that mean magazine has all the letters to create the ransom note
+if(ransomNote===''){
+    console.log(true);
+}else{
+    console.log(false);
+}
